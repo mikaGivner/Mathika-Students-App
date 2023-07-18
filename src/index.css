@@ -1,0 +1,33 @@
+@import url("https://fonts.googleapis.com/css2?family=Lumanosimo&family=Quicksand:wght@400;500;700&display=swap");
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Quicksand", sans-serif;
+  font-size: 1.3rem;
+  font-weight: 400;
+  line-height: 2rem;
+  background-color: var(--light-ft);
+}
+:root {
+  --dark-bg: #674737;
+  --light-bg: #ccaf91;
+  --dark-ft: #585858;
+  --light-ft: #fef4ea;
+  --logo-cr: #ffc0cb;
+}
+h1 {
+  font-family: "Lumanosimo", cursive;
+  font-size: 7rem;
+  font-weight: 400;
+}
+h2 {
+  font-family: "Quicksand", sans-serif;
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 2rem;
+}
+span {
+  font-family: "Quicksand", sans-serif;
+  font-weight: 500;
+}
