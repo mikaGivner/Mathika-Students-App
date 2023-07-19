@@ -31,3 +31,6 @@ span {
   font-family: "Quicksand", sans-serif;
   font-weight: 500;
 }
+.link {
+  text-decoration: none;
+}
