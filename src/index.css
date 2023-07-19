@@ -33,4 +33,6 @@ span {
 }
 .link {
   text-decoration: none;
+  background: none;
+  border-radius: 1rem;
 }

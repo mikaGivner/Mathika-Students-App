@@ -1,12 +1,12 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Land, LogoStyle, LandPageStyle } from '../style/index.jsx';
+import { Land, LandPageStyle, LogoStyle, Button } from '../Style';
 function LandPage({WhereToGo}) {
   return (
     <LandPageStyle>
    <Land/>
    <LogoStyle/>
-   <button><Link className='link' to={WhereToGo}>Enter</Link></button>
+   <Link className='link' to={WhereToGo}><Button style={{margin:"2rem"}}>Enter</Button></Link>
    </LandPageStyle>
   )
 }
