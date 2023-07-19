@@ -1,2 +1,3 @@
 import LandPage from "./LandPage";
-export {LandPage};
+import TeacherPage from "./TeacherPage";
+export {LandPage, TeacherPage};
