@@ -7,7 +7,7 @@
   font-size: 1.3rem;
   font-weight: 400;
   line-height: 2rem;
-  background-color: var(--light-ft);
+  /* background-color: var(--light-ft); */
 }
 :root {
   --dark-bg: #674737;
