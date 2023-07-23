@@ -1,6 +1,6 @@
 import "./index.css"
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import {LandPage,TeacherPage} from "./Pages/indexPages.jsx";
+import {LandPage,TeacherPage, TeacherHome} from "./Pages/indexPages.jsx";
 const router = createBrowserRouter([
 { path: "/", element: <LandPage WhereToGo="/Teacher"/>, errorElement: <>Error...</> },
 {
@@ -8,7 +8,7 @@ const router = createBrowserRouter([
   element: <TeacherPage/>,
   errorElement: <>Error...</>,
   children: [
-    { path: "/Teacher/Home", element: <div>Home</div> },
+    { path: "/Teacher/Home", element: <TeacherHome/> },
     { path: "/Teacher/scheduled", element: <div>Scheduled</div>  },
   ],
 },
