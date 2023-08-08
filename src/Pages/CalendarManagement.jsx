@@ -18,6 +18,7 @@ export const CalendarManagement=()=> {
     const todayMonthAndYear=moment().subtract(firstAtWeek, 'days').format('ll');
     const ArrThisMonthAndYear= todayMonthAndYear.split(' ');
 
+    console.log(`todayMonthAndYear`)
   return (
     <>
      <DisplayRowCenter>        
@@ -27,11 +28,11 @@ export const CalendarManagement=()=> {
     </DisplayRowCenter>
     <div style={{display:"flex", justifyContent:'space-between'}} >
             {week.map((day,i)=>{
-            const curDay=moment().subtract(firstAtWeek+1-i, 'days').format('L');
+            const curDay=moment().subtract(firstAtWeek+2-i, 'days').format('L');
             let arrCurDay= curDay.split('/');
             return <DayDisplay nameDay={day}
-            beforeToday={firstAtWeek-i>0}
-            today={firstAtWeek-i===-1} key={i} day={arrCurDay[1]}/>
+            beforeToday={firstAtWeek-i+1>=0}
+            today={firstAtWeek-i===-2} key={i} day={arrCurDay[1]}/>
             })}
     </div>
     </>

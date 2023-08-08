@@ -42,7 +42,7 @@ span {
   flex-direction: column;
   width: 100%;
   align-items: center;
-  justify-content: center;
+  justify-content: start;
   /* border-right: 0.1rem solid #000; */
 }
 .dayDisplay:hover {
