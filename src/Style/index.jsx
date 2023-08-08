@@ -8,4 +8,5 @@ import LogoPagesStyle from "./PagesLogo";
 import BodyTeacher from "./BodyTeacher";
 import BottomUL from "./BottomUL";
 import Box from "./Box";
-export {Land, LogoStyle, LandPageStyle, Button,TeacherPageStyle,TeacherHead, LogoPagesStyle,BodyTeacher, BottomUL, Box};
+import DisplayRowCenter from "./DisplayRowCenter";
+export {Land, LogoStyle, LandPageStyle, Button,TeacherPageStyle,TeacherHead, LogoPagesStyle,BodyTeacher, BottomUL, Box, DisplayRowCenter};

@@ -1,19 +1,21 @@
-export default MockDBTeacher={
+ const MockDBTeacher={
  users:{
     MikaGi:{  
         isTeacher:true,
         openLessons:{
-            today:[
-                "2pm-",
-                "3pm-Mika Noy",
-                "4pm-"
+            25:[
+                "2pm",
+                "3pm",
+                "4pm"
             ],
-            tomorrow:[
-                "12pm-Shaked Levy",
-                "14pm-Tommer Hen",
-                "15pm-Danit Kol"
-            ],
+            // 26:[
+            //     ["12pm"],
+            //     ["14pm"],
+            //     ["15pm"]
+            // ],
         }
     }
  }
 }
+
+export default MockDBTeacher;
