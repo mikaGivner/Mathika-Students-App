@@ -4,8 +4,8 @@ import { Box } from '../Style';
 import "../index.css";
 function BoxComponent({relevantPage, pageToGo}) {
   const pagesArr=[{whichPage:relevantPage, toPage:pageToGo},
-    {whichPage:<div>add a student</div>, toPage:"/"}
-]
+    {whichPage:<div>add a student</div>, toPage:"/"},
+    ]
     return (
     <>
     {pagesArr.map(boxPresent=>{

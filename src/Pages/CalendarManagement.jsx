@@ -1,13 +1,6 @@
 import {useState} from 'react';
 import { DisplayRowCenter } from '../Style';
 import moment from 'moment';
-import 'moment/locale/he';
-moment.defineLocale('he', {
-    weekdays: 'ראשון_שני_שלישי_רביעי_חמישי_שישי_שבת'.split('_'),
-    weekdaysShort: 'א_ב_ג_ד_ה_ו_ש'.split('_'),
-    monthsShort: 'ינואר_פברואר_מרץ_אפריל_מאי_יוני_יולי_אוגוסט_ספטמבר_אוקטובר_נובמבר_דצמבר'.split('_'),
-});
-moment.locale('he');
 import DayDisplay from './DayDisplay';
 import { AiOutlineArrowLeft,AiOutlineArrowRight } from 'react-icons/Ai';
 export const CalendarManagement=()=> {
