@@ -11,6 +11,7 @@ const router = createBrowserRouter([
   children: [
     { path: "/Teacher/Home", element: <TeacherHome/> },
     { path: "/Teacher/calendar", element: <CalendarManagement/>  },
+    { path: "/Teacher/tryCalendar", element:<TestLibrary/>  },
   ],
 },
 ]);

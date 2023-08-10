@@ -1,20 +1,31 @@
  const MockDBTeacher={
- users:{
-    MikaGi:{  
-        isTeacher:true,
-        openLessons:{
-            25:[
-                "2pm",
-                "3pm",
-                "4pm"
-            ],
-            // 26:[
-            //     ["12pm"],
-            //     ["14pm"],
-            //     ["15pm"]
-            // ],
-        }
-    }
+ 2020:{
+
+ },
+ 2021:{
+
+ },
+ 2022:{
+
+ },
+ 2023:{
+Jun:{
+
+},
+Jul:{
+
+},
+Aug:{
+  "6,":[[`2pm`,],[`3pm`,`Mika Mik`]],
+  "8,":[[`2pm`,],[`3pm`,`Mika Mik`]],
+  "9,":[[`2pm`,],[`3pm`,`Mika Mik`]],
+  "10,":[[`2pm`,],[`3pm`,`Mika Mik`]],
+  "11,":[[`2pm`,],[`3pm`,`Mika Mik`]],
+  "12,":[[`2pm`,],[`3pm`,`Mika Mik`]],
+  "14,":[[`2pm`,],[`3pm`,`Mika Mik`]],
+  "15,":[[`2pm`,],[`3pm`,`Mika Mik`]]
+}
+
  }
 }
 
