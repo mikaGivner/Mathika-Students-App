@@ -14,6 +14,7 @@ export const CalendarManagement=()=> {
     console.log(`todayMonthAndYear`)
   return (
     <>
+    
      <DisplayRowCenter>        
       <p onClick={PreWeek}>{<AiOutlineArrowLeft/>}</p>
             <h2>{ArrThisMonthAndYear[2]} {ArrThisMonthAndYear[0]}</h2>
