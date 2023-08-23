@@ -1,16 +1,16 @@
-import React from 'react'
 import { Link } from 'react-router-dom';
-import { Box } from '../Style';
+import { Box,PageInsideBox } from '../Style';
+import ScheduleTeacher from '../Pages/ScheduleTeacher';
 import "../index.css";
-function BoxComponent({relevantPage, pageToGo}) {
-  const pagesArr=[{whichPage:relevantPage, toPage:pageToGo},
-    {whichPage:<div>add a student</div>, toPage:"/"},
+function BoxComponent() {
+  const pagesArr=[{whichPage:<ScheduleTeacher/>, toPage:"/Teacher/calendar"},
+    {whichPage:<div>{" movies"}</div>, toPage:"/"},
     ]
     return (
     <>
     {pagesArr.map(boxPresent=>{
         return <Box key={Math.random()}>
-           <div style={{height:"90%", overflow:"hidden"}}>{boxPresent.whichPage}</div>
+           <PageInsideBox>{boxPresent.whichPage}</PageInsideBox>
            <div>
                 <Link style={{height:"10%"}} className='link' to={boxPresent.toPage}> <div>Click for more</div></Link>
            </div>
@@ -19,5 +19,4 @@ function BoxComponent({relevantPage, pageToGo}) {
 </>
   )
 }
-
 export default BoxComponent
