@@ -15,5 +15,4 @@ function TeacherPage() {
     </TeacherPageStyle>
   )
 }
-
 export default TeacherPage

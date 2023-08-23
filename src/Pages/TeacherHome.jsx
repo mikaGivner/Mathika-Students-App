@@ -1,14 +1,5 @@
-import {useEffect} from 'react'
-import CalenderManagement from './CalendarManagement';
-import TestLibrary from './TestLibrary';
-import BoxComponent from './BoxComponent';
+import BoxComponent from '../Components/BoxComponent';
 function TeacherHome() {
- 
-  return (
-    <>
-      <BoxComponent relevantPage={< TestLibrary/>} pageToGo="/Teacher/tryCalendar">
-    </BoxComponent>
-    </>
-  )
+  return <BoxComponent />  
 }
 export default TeacherHome;
