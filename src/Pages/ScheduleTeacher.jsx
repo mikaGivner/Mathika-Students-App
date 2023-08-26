@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import "../index.css";
 import { AiOutlineArrowLeft, AiOutlineArrowRight } from 'react-icons/Ai';
 import moment from 'moment';
@@ -17,6 +17,26 @@ function ScheduleTeacher() {
     const getFormattedDate = (offset) => {
         return moment().subtract(dayInWeek - offset, 'days').format('llll').split(" ");
     };
+    let [dataArr, setDataArr] = useState([]);
+    let [lessonDetails, setLessonDetails] = useState();
+    let dayInArr;
+    let isDayLesson;
+    useEffect(() => {
+        const fetchData = async () => {
+          try {
+            const response = await fetch('http://localhost:8000/api/v1/newCalendar');
+            const data = await response.json();
+            setDataArr(data.data)
+          } catch (error) {
+            console.error('Error fetching data:', error);
+          }
+        };
+        fetchData();
+      }, []);
+      const SpecificDay=(dayDate)=>{
+        dayInArr=dataArr.filter((date) => date.month===dayDate[1] && date.day===dayDate[2] && date.year==dayDate[3]);
+        return dayInArr.length!==0 ? isDayLesson=true : isDayLesson=false;
+        }
     return (<>
         <ScheduleStyle size={"large"}><h2>{monNyearOfWeek[1]} {monNyearOfWeek[3]}</h2></ScheduleStyle>
         <ScheduleStyle size={"small"}>
@@ -37,9 +57,19 @@ function ScheduleTeacher() {
                             {wannaD[0]}
                         </div>
                     ))}
+                    {SpecificDay(formattedDate)}
+                    {isDayLesson && <div>{dayInArr[0].lessons.map((lesson)=>{
+                      return lesson[1]!=="" ? <div key={Math.random()} style={{fontSize:"0.8rem", background:"green"}} onClick={()=>{
+                        setLessonDetails(`${dayInArr[0].day} ${dayInArr[0].month} ${lesson[0]} ${lesson[1]}`)
+                      }}>
+                        {lesson[0]} </div> : <div key={Math.random()} style={{fontSize:"0.8rem"}}>
+                        {lesson[0]} </div>
+                    })}</div>}
             </DayStyle>
             })}
         </ScheduleStyle>
+        {lessonDetails!=="" && <div>
+        {lessonDetails}</div>}
     </>)
 }
 export default ScheduleTeacher
